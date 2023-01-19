@@ -10,12 +10,14 @@ Using OpenSSL v.1.1.1 for platform x64
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
 
+/*
+I: Program takes a signature file as input and its public key 
+   in order to decrypt the content and compare the SHA256 hash to the original file which was signed.
+O: [0 = success] \\ [1 = fail] as "main()" function return type is an integer.
+   Comparison result as a form of hash (digest) validation.
+*/
 
-// I: Program takes a signature file as input and its public key 
-//in order to decrypt the content and compare the SHA256 hash to the original file which was signed.
-// O: [0 = success] // [1 = fail] as 'main()' function return type is an integer.
-// Comparison result as a form of hash (digest) validation.
-		
+
 int main()
 {
 	// File pointer
@@ -123,7 +125,7 @@ int main()
 	}
 	else
 	{
-		printf("\n\nSignature is wrong!\n");
+		printf("\n\nSignature is WRONG!\n");
 		return 1;
 	}
 }
