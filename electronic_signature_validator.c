@@ -1,7 +1,7 @@
+#pragma warning(disable:4996)
 /*
 Using OpenSSL v.1.1.1 for platform x64
 */
-#pragma warning(disable:4996)
 #include <stdio.h>
 #include <malloc.h>
 #include <memory.h>
