@@ -50,7 +50,7 @@ int main()
 
 		// Close file
 		fclose(f_sig);
-		// And free dynamically allocated memory
+		// and free dynamically allocated memory
 		free(buf);
 		RSA_free(apub);
 	}
@@ -117,7 +117,7 @@ int main()
 	printf("\n\n");
 	
 	
-	// Compare results
+	// Compare Results
 	if(memcmp(sig_data, final_digest, 16) == 0)
 	{
 		printf("\n\nSignature OK!\n");
