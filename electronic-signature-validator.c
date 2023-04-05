@@ -12,7 +12,7 @@ Using OpenSSL v.1.1.1 for platform x64
 
 /*
 I: Program takes a signature file as input and its public key 
-   in order to decrypt the content and compare the SHA256 hash to the original file which was signed.
+   in order to decrypt the content and compare the SHA256 hash against the original file which was signed.
 O: [0 = success] \\ [1 = fail] as "main()" function return type is an integer.
    Comparison result as a form of hash (digest) validation.
 */
