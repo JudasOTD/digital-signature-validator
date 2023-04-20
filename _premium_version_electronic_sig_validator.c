@@ -116,7 +116,7 @@ int main()
 	printf("\n\n");
 
 
-	// Compare Results
+	// Compare the results
 	if (memcmp(sig_data, final_digest, 16) == 0)
 	{
 		printf("\n\nSignature OK!\n");
