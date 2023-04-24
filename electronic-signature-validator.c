@@ -11,7 +11,7 @@ Using OpenSSL v.1.1.1 for platform x64.
 #include <openssl/pem.h>
 
 // Function header 
-void display_hash(unsigned char* data);
+void display_hash(unsigned char* data_buffer);
 
 /*
 I: Program takes a signature file as input and its public key
