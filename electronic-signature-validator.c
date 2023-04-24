@@ -54,7 +54,7 @@ int main()
 		fclose(f_sig);
 		// and free dynamically allocated memory
 		RSA_free(apub);
-    free(buf);
+		free(buf);
 	}
 	else
 	{
@@ -67,15 +67,13 @@ int main()
 	display_hash(sig_data);
 
 
-	// Declare and initialize SHA context
+	// Declare and initialize SHA context in order to find requested file and hash it
 	SHA256_CTX ctx_sha;
 	SHA256_Init(&ctx_sha);
 
 	FILE* fp = NULL;
 	// IGNIS_10M text file can be found online
 	const char* file_path = "W:\\Downloads\\IGNIS_10_M.txt";
-	unsigned char* file_buf = NULL;
-
 	// Read binary file function result validation; exit upon failure.
 	e = fopen_s(&fp, file_path, "rb");
 	if (e != 0)
@@ -84,15 +82,15 @@ int main()
 	// Query file length in bits
 	fseek(fp, 0, SEEK_END);
 	int file_length = ftell(fp);
+	unsigned char* file_buf = NULL;
 	file_buf = (unsigned char*)malloc(file_length);
-	
+
 	// Reset cursor
 	fseek(fp, 0, SEEK_SET);
 	fread(file_buf, file_length, 1, fp);
 
 	// Pointer
 	unsigned char* tmp_buf = file_buf;
-
 	// Hash entire file for comparison
 	// Process uses two methods, namely  "Update()" and  "Final()"	
 	while (file_length > 0)
@@ -108,15 +106,16 @@ int main()
 	}
 	fclose(fp);
 
-  
-	// Compute new SHA256 hash for requested file
+
+	// Compute new SHA256 hash for the requested file
 	unsigned char* final_digest = NULL;
 	final_digest = (unsigned char*)malloc(16);
 	SHA256_Final(final_digest, &ctx_sha);
+
 	printf("\nPersonal SHA256 file hash: ");
 	display_hash(final_digest);
 
-  
+	
 	// Compare results
 	if (memcmp(sig_data, final_digest, 16) == 0)
 	{
@@ -131,12 +130,12 @@ int main()
 }
 
 // Implementation of function header described at the beginning of program
-void display_hash(unsigned char* data)
+void display_hash(unsigned char* data_buffer)
 {
 	char i;
 	// Lowercase hexadecimal representation
 	for (i = 0; i < SHA256_DIGEST_LENGTH; i++)
-		printf("%02x", data[i]);
+		printf("%02x", data_buffer[i]);
 	printf("\n\n");
 }
 
