@@ -24,7 +24,7 @@ int main()
    	Comparison result as a form of hash (digest) validation.
 */
    
-    unsigned char* sig_data = NULL;
+    	unsigned char* sig_data = NULL;
 	// File pointer
 	FILE* f_sig = NULL;
 
