@@ -1,6 +1,6 @@
 #pragma warning(disable:4996)
 /*
-Using OpenSSL v.1.1.1 for platform x64.
+	Using OpenSSL v.1.1.1 for platform x64.
 */
 #include <stdio.h>
 #include <malloc.h>
@@ -13,22 +13,22 @@ Using OpenSSL v.1.1.1 for platform x64.
 // Function header 
 void display_hash(unsigned char* data_buffer);
 
-/*
-I: Program takes a signature file as input and its public key
-   in order to decrypt the content and compare the SHA256 hash against the original file which was signed.
-O: [0 = success] \\ [1 = fail] as "main()" function return type is an integer.
-   Comparison result as a form of hash (digest) validation.
-*/
-
 
 int main()
 {
+	/*
+	I: Program takes a signature file as input and its public key
+   	in order to decrypt the content and compare the SHA256 hash against the original file which was signed.
+	O: [0 = success] \\ [1 = fail] as "main()" function return type is an integer.
+   	Comparison result as a form of hash (digest) validation.
+	*/
+
 	// File pointer
 	FILE* f_sig = NULL;
 	unsigned char* sig_data = NULL;
 
 	// Decrypt and validate a SHA256-hashed Electronic Signature
-	// Attempt to open file in binary mode, store and process result
+	// Attempt to open signature file in binary mode, store and process result
 	errno_t e = fopen_s(&f_sig, "W:\\Downloads\\RSA_signature.sig", "rb");
 	// Success
 	if (e == 0)
@@ -82,15 +82,15 @@ int main()
 	// Query file length in bits
 	fseek(fp, 0, SEEK_END);
 	int file_length = ftell(fp);
-	unsigned char* file_buf = NULL;
-	file_buf = (unsigned char*)malloc(file_length);
-
 	// Reset cursor
 	fseek(fp, 0, SEEK_SET);
 	fread(file_buf, file_length, 1, fp);
-
+	
+	unsigned char* file_buf = NULL;
+	file_buf = (unsigned char*)malloc(file_length);
 	// Pointer
 	unsigned char* tmp_buf = file_buf;
+	
 	// Hash entire file for comparison
 	// Process uses two methods, namely  "Update()" and  "Final()"	
 	while (file_length > 0)
