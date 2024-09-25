@@ -17,7 +17,9 @@ Internet Explorer Enhanced Security Configuration configures your server and Int
 
 Keeping the Internet Explorer Enhanced Security Configuration enabled on your servers is recommended to help ensure that your servers are not inadvertently exposed to malware or other browser-based attacks. For more information, including the complete list of changes that are implemented by Internet Explorer Enhanced Security Configuration, see the Internet Explorer Enhanced Security Configuration overview. 
 
---------------------------------------------------------------------------------
+---------------------------------------
+tweek th e tweekenin
+-----------------------------------------
 http://www.youtube.com/watch?v=guTEwiWE8-o
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
