@@ -37,6 +37,7 @@ jobs:
 
 
   ENV:
+  BUILD_TYPE: Release
  - name: __rc""
 
 "RunWWW",null]},-1],["cr:",["TimeSliceImpl"],{"__rc"
