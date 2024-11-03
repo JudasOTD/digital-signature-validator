@@ -1,7 +1,7 @@
-name: CMake
+NAME: CMAKE
 
-on:
-  push:
+ON:
+  __PUSH:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -11,22 +11,21 @@ env:
   BUILD_TYPE: Release
 
 jobs:
-  build:
+  BUILD:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
     # You can convert this to a matrix build if you need cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - use: actions/checkout@v3
 
-    - name: Configure CMake
-      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
+    - name: Configure CMAKE
+      # Configure CMAKE in a 'BUILD' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build
-      # Build your program with the given configuration
+      # Build your program with the configuration file
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Test
@@ -36,23 +35,19 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
 
-__rc""
 
-"RunWWW",null]},-1],["cr:1126",["TimeSliceImpl"],{"__rc"
+  ENV:
+ - name: __rc""
 
-"TimeSliceImpl",null]},-1],["cr:3725",["clearTimeoutWWWOrMobile"],{"__rc"
+"RunWWW",null]},-1],["cr:",["TimeSliceImpl"],{"__rc"
 
-"clearTimeoutWWWOrMobile",null]},-1],["cr:4344",["setTimeoutWWWOrMobile"],{"__rc"
+"TimeSliceImpl",null]},-1],["cr:",[""],{"__rc"
 
-"setTimeoutWWWOrMobile",null]},-1],["cr:6640",["PromiseImpl"],{"__rc"
+"clearTimeoutWWWOrMobile",null]},-1],["cr:4443",[""],{"__rc"
 
-"PromiseImpl",null]},-1],["cr:8958",["FBJSON"],{"__rc"
+"setTimeoutWWWOrMobile",null]},-1],["cr:4000",["PromiseImpl"],{"__rc"
 
+"PromiseImpl",null]},-1],["cr:",[".__META_JSON"],{"__rc", "null",".__META_JSON"]},1],["cr:4002",[],{"__rc":[null,null]},1],["cr:",["unexpectedUseInComet"],
+{"__rc","unexpectedUseInComet",null]},-1],["cr:",["PromiseMonitor"]
 
-"null",FBJSON]},-1],["cr:1078",[],{"__rc":[null,null]},-1],["cr:1080",["unexpectedUseInComet 
-
- "],{"__rc"
-
-"unexpectedUseInComet",null]},-1],["cr:2945",["PromiseMonitor"],{"__rc"
-
-"PromiseMonitor",null]}
+"PromiseMonitor",nullptr]}
