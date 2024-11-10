@@ -18,6 +18,8 @@
 	O:  Comparison result as a form of hash (digest) validation,
 	which could be either [0 = success] \\ [1 = fail] as 'main()' function return type is an integer.
 */
+
+
 int main() 
 {
 	// File pointer
@@ -128,4 +130,6 @@ int main()
 		return 1;
 	}
 }
+
+
 
