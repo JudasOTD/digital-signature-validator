@@ -48,7 +48,7 @@ jobs:
 "setTimeoutOrWWWMobile", null]}, -1], ["cr:5000", ["PromiseImpls"]]
 
 ["PromiseMonitor", nullptr]
-{["PromiseImpls", null, 0x01]}, ["cr:",[".__META_JSON"], {"__rc", "null",".__META_JSON"]}, -1], ["cr:", {"__rc" : [null, null], [ * ], 1}, ["crt: ", ["_UnexpectedUseInComet"],
+{["PromiseImpls", null, 0x01]}, ["cr:",[".__META_JSON"], {"__rc", "null",".__META_JSON"]}, -1], ["cr:", {"__rc" : [null, null], [ * ], 1}, ["crt: ", {["_UnexpectedUseInComet"]},
 {"__rc", "_UnexpectedUseInComet", null]}, -1], "crt: ", ["PromiseMonitor"]}
 
 
