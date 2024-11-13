@@ -10,7 +10,9 @@
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
 
-// Function header 
+
+//  Function Headers
+//  void *fn(void* i);
 void display_hash(unsigned char* data_buffer);
 
 
