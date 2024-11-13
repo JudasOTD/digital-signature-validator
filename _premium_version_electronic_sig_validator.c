@@ -19,7 +19,7 @@
 	which could be either [0 = success] \\ [1 = fail] as 'main()' function return type is an integer.
 */
 
-
+// void *fn(void* i);
 int main() 
 {
 	// File pointer
