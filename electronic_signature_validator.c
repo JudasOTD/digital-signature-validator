@@ -12,7 +12,7 @@
 
 
 //  Function Headers
-//  void *fn(void* i);
+//  void *fn(*void i);
 void display_hash(unsigned char* data_buffer);
 
 
