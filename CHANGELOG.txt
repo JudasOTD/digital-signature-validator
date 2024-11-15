@@ -1,6 +1,5 @@
-v1.1
-########
 15/11/24
+########
 Updated Dependencies
 Implement SHA-512
 
