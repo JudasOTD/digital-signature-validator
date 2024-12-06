@@ -57,6 +57,7 @@ int main()
 		// and free dynamically allocated memory
 		RSA_free(apub);
 		free(buf);
+		buf = NULL ; //  ##   
 	}
 	else
 	{
