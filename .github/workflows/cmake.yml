@@ -32,9 +32,9 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
 
-  env:
-    - NAME: "__rc: crt: "
+  __ENV__:
     - BUILD_TYPE: Release
+    - NAME: "__rc: crt: "
 
 
 
