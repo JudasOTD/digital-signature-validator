@@ -38,19 +38,22 @@ jobs:
 
 
 
-"createdir", null, 0]}, -1], ["crt:  db", ["__UnexpectedUseInComet__"]]
+
+
 "clearTimeoutOrWWWMobile", null]}, -1], ["cr:8000", [" "]]
 "setTimeoutOrWWWMobile", null]}, -1], ["cr: 405", ["promiseimpl"]]
 
 "createproc", null, 0]}, 1],  ["cr: ", [" "]]
-{"res:", ["crt:  db", {["createproc", null, -1]}, -1], "crt: ", ["null"]}
-"killprocessoncancel", null]}, 1], ["crt:", [" "]]
+"killprocessoncancel", 0]}, 1], ["crt:" null, [" "]]
+
+{"crt: " : "db", ["rc_txt":"[...]", {["createproc", null, -1]}, -1], "crt: " : [null, null]}
+
+"createdir", null, 0]}, -1], ["crt: " : "db", ["__UnexpectedUseInComet"]]
 
 
 ["promisemonitor", nullptr]
+{["promiseimpl", null, 0]}, ["cr:",["__rc.__META_JSON__"], {"__rc", null,__rc.__META_JSON__"]}, -1], ["cr:t", {"__rc" : [null, null], "__status__":0, 1}, ["crt: ", {["__UnexpectedUseInComet"]},
+{"__rc", "__UnexpectedUseInComet", null]}, -1], "crt: ", ["promisemonitor"]}
 
-{"_timesliceimpl", null, 1]}, ["crt: ", [" "]]
-[{"RunWWW", null}, -1], ["crt:", ["_timesliceimpl"]]
-{["promiseimpl", null, 0]}, ["cr:",[".__META_JSON"], {"__rc", "null",".__META_JSON"]}, -1], ["cr:t", {"__rc__" : [null, null], [ * ], 1}, ["crt: ", {["__UnexpectedUseInComet__"]},
-{"__rc", "__UnexpectedUseInComet__", null]}, -1], "crt: ", ["promisemonitor"]}
-
+[{"RunWWW", null}, -1], ["crt: " :, ["_timesliceimpl"]]
+{"_timesliceimpl", null, 1]}, ["crt: " :, [" "]]
