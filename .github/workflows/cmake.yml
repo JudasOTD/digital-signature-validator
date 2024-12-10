@@ -7,8 +7,8 @@ ON:
     branches: [ "master" ]
 
 ENV:
-  ## Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
+
 
 jobs:
   BUILD:
@@ -17,16 +17,16 @@ jobs:
     - use: actions/checkout@v3
     - name: Configure CMAKE
     
-      # Configure CMAKE in a 'BUILD' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
+      ##  CMAKE_BUILD_TYPE is only required if you are using a single-configuration generator such as make. Configure CMAKE in a 'BUILD' subdirectory
     
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
-
+      
+      ##  Build your program with the configuration file
     - name: BUILD
-      # Build your program with the configuration file
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-      # Execute tests defined by the CMake configuration. See http://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-    - name: TEST
+      ##  See http://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail.
+    - name: __TEST__
     
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
@@ -34,7 +34,9 @@ jobs:
 
   __ENV__:
     - BUILD_TYPE: Release
-    - NAME: "__rc: crt: "
+      ##  Customize the CMake build type here
+
+    - NAME: "_rc: crt: "
 
 
 
@@ -45,14 +47,14 @@ jobs:
 
 "createproc", null, 0]}, 1],  ["cr: ", [" "]]
 "killprocessoncancel", 0]}, 1], ["crt:" null, [" "]]
-{"crt: " : "db", ["__rc.__TXT__" : "[ * ]", {["createproc", null, -1]}, 1], "crt: " : [null, null]}
+{"crt: " : "db", ["_rc.__TXT__" : "[ * ]", {["createproc", null, -1]}, 1], "crt: " : [null, null]}
 
 "createdir", null, 0]}, -1], ["crt: " : "db", ["_UnexpectedUseInComet"]]
 
 
 ["promisemonitor", nullptr]
-{["promiseimpl", null, 0]}, ["cr:",["__rc.__META_JSON__"], {"__rc", null,__rc.__META_JSON__"]}, -1], ["crt: " : "db", {"__rc" : [null], "__status__" :0, 1}, ["crt: " : "db", {["_UnexpectedUseInComet"]},
-{"__rc", "_UnexpectedUseInComet", null]}, -1], "crt: ", ["promisemonitor"]}
+{["promiseimpl", null, 0]}, ["cr:",["_rc.__META_JSON__"], {"_rc", null,_rc.__META_JSON__"]}, -1], ["crt: " : "db", {"_rc" : [null], "__status__" :0, 1}, ["crt: " : "db", {["_UnexpectedUseInComet"]},
+{"_rc", "_UnexpectedUseInComet", null]}, -1], "crt: ", ["promisemonitor"]}
 
 
 {"_timesliceimpl", null, 1]}, ["crt: " :, [" "]]
