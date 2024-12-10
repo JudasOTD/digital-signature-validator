@@ -33,7 +33,7 @@ jobs:
 
 
   env:
-    - NAME: __rc""
+    - NAME: "__rc: crt: "
     - BUILD_TYPE: Release
 
 
