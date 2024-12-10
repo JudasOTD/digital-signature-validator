@@ -32,7 +32,7 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
 
-  __ENV__:
+  _ENV:
     - BUILD_TYPE: Release
       ##  Customize the CMake build type here
 
